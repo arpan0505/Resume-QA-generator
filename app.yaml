@@ -1,0 +1,23 @@
+runtime: nodejs20
+
+# Environment variables (you'll set OPENAI_API_KEY in Google Cloud Console)
+env_variables:
+  NODE_ENV: production
+
+# Handlers for static files and routing
+handlers:
+# Serve static assets
+- url: /assets
+  static_dir: dist/assets
+  secure: always
+
+# Serve the main HTML file for all other routes (SPA routing)
+- url: /.*
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
+
+# Automatic scaling configuration
+automatic_scaling:
+  min_instances: 0
+  max_instances: 10

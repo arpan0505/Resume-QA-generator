@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Q&A Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --font-serif: 'Lora', serif;
+        --font-sans: 'Montserrat', sans-serif;
+        
+        /* --- Blueprint Mode Theme --- */
+        --desk-bg: #1A202C; /* Slate 900 */
+        --desk-ink: #2d231c; /* Kept for text on paper */
+        --paper-bg: #fdfbf5;
+        --paper-lines: #e8e3d6;
+        --highlight-green: rgba(167, 243, 208, 0.7);
+        --highlight-yellow: rgba(253, 230, 138, 0.7);
+        --highlight-red: rgba(252, 165, 165, 0.7);
+        --primary-accent: #3b82f6;
+      }
+
+      body {
+        background-color: var(--desk-bg);
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+        color: #A0AEC0; /* Slate 400 */
+        font-family: var(--font-sans);
+      }
+
+      /* Create a new stacking context to contain the background and prevent it from overlapping content. */
+      #root {
+        isolation: isolate;
+      }
+    </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

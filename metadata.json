@@ -1,0 +1,5 @@
+{
+  "name": "Resume Q&A Generator",
+  "description": "An AI-powered interview assistant that takes a resume and generates categorized, multi-level difficulty interview questions to help candidates prepare and recruiters screen.",
+  "requestFramePermissions": []
+}
